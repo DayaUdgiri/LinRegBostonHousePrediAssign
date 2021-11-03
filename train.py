@@ -4,7 +4,6 @@ import pandas as pd
 from sklearn.metrics import r2_score
 from sklearn.datasets import load_boston
 from sklearn.preprocessing import StandardScaler
-from sklearn import linear_model
 from sklearn.linear_model import LassoCV,Lasso, RidgeCV, Ridge, ElasticNetCV, ElasticNet
 from sklearn.model_selection import train_test_split
 import pickle
