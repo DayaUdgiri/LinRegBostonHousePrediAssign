@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict House Price (1000's $) in Boston</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label>CRIM:</label>
+            <input type="float" name="CRIM" id="CRIM" placeholder="CRIM" value="0.01778" ><br><br>
+            <label>ZN:</label>
+            <input type="float" name="ZN" id="ZN" placeholder="ZN" value="95.0"><br><br>
+            <label>INDUS:</label>
+            <input type="float" name="INDUS" id="INDUS" placeholder="INDUS" value="1.47"><br><br>
+            <label>CHAS:</label>
+            <input type="float" name="CHAS" id="CHAS" placeholder="CHAS" value="0.0"><br><br>
+            <label>NOX:</label>
+            <input type="float" name="NOX" id="NOX" placeholder="NOX" value="0.403"><br><br>
+            <label>RM:</label>
+            <input type="float" name="RM" id="RM" placeholder="RM" value="7.135"><br><br>
+            <label>AGE:</label>
+            <input type="float" name="AGE" id="AGE" placeholder="AGE" value="13.9" ><br><br>
+            <label>DIS:</label>
+            <input type="float" name="DIS" id="DIS" placeholder="DIS" value="7.6534"><br><br>
+            <label>RAD:</label>
+            <input type="float" name="RAD" id="RAD" placeholder="RAD" value="3.0" ><br><br>
+            <label>TAX:</label>
+            <input type="float" name="TAX" id="TAX" placeholder="TAX" value="402.0" ><br><br>
+            <label>PTRATIO:</label>
+            <input type="float" name="PTRATIO" id="PTRATIO" placeholder="PTRATIO" value="17.0"><br><br>
+            <label>B:</label>
+            <input type="float" name="B" id="B" placeholder="B" value="384.3""><br><br>
+            <label>LSTAT:</label>
+            <input type="float" name="LSTAT" id="LSTAT" placeholder="LSTAT" value="4.45" ><br><br>
+
+            <h3 style="text-align:left">Another example of values- </h3>
+            <h3 style="text-align:left"> 0.00632, 18.00, 2.31,0.00,0.538,6.575,65.20,4.09,1.00,296.00,15.30,396.90,4.98 </h3>
+
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
